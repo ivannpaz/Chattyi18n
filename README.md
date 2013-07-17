@@ -27,4 +27,16 @@ Usage:
 TODO:
 -----
 
-- Create private sessions (right now is quite promiscuous!)
+- Create private sessions (right now is quite promiscuous!) (That's what redis was included in this project, but still unused!)
+
+
+Resources/Contents:
+-------------------
+
+- Vagrant + Virtualbox base boxes with LAMP stack
+- Everything glued together via [Silex](https://github.com/fabpot/Silex).
+- View rendering: [Twig](https://github.com/fabpot/Twig)
+- Redis support: [Predis](https://github.com/nrk/predis) + [Predis Service Provider](https://github.com/nrk/PredisServiceProvider)
+- Configuration: [ConfigProvider](https://github.com/igorw/ConfigServiceProvider)
+- Translation: [Microsoft Translator v2 Api](https://github.com/matthiasnoback/microsoft-translator) + [Service Provider](https://github.com/matthiasnoback/MicrosoftTranslatorServiceProvider)
+- CSS Framework: [Furatto](http://icalialabs.github.io/furatto/)
