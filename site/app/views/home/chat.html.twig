@@ -1,0 +1,87 @@
+{% extends "layout/main.html.twig" %}
+
+{% block view_content %}
+    <h1>Chat session opened for token "{{ token }}"</h1>
+    <div class="row-fluid">
+        <div id="chat-window" class="span7">
+            <ul>
+            </ul>
+            <form action=""
+                class="inline-form clearfix"
+                method="get"
+                accept-charset="utf-8"
+                id="input-container">
+                <input type="text"
+                    id="chat-input"
+                    value=""
+                    class="span10" />
+                <input type="submit"
+                    class="btn btn-success span2"
+                    id="btn-submit"
+                    value="SEND" />
+            </form>
+        </div>
+
+        <div class="span5">
+
+            {%
+                set langs = {
+                    'en': 'English',
+                    'ca': 'Catalá',
+                    'es': 'Español',
+                    'fr': 'Français',
+                    'ge': 'Deutsch',
+                    'pl': 'Polski',
+                    'ja': '日本語',
+                    'it': 'Italiano',
+                    'pt': 'Português'
+                }
+            %}
+
+            <div class="row-fluid">
+                <div class="span6">
+                    <h3>Writing in:</h3>
+
+                    <ul class="unstyled lang_selectors source">
+                        {% for lang, label in langs %}
+                        <li>
+                            <label for="src_lang_{{ lang }}" class="inline">
+                                <input type="radio"
+                                    name="src_lang"
+                                    value="{{ lang }}"
+                                    {% if loop.first %}
+                                    checked="checked"
+                                    {% endif %}
+                                    id="src_lang_{{ lang }}" />
+                                {{ label }}
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="span6">
+                    <h3>Translating to:</h3>
+
+                    <ul class="unstyled lang_selectors target">
+                        {% for lang, label in langs %}
+                        <li>
+                            <label for="dst_lang_{{ lang }}" class="inline">
+                                <input type="radio"
+                                    name="dst_lang"
+                                    value="{{ lang }}"
+                                    {% if loop.first %}
+                                    checked="checked"
+                                    {% endif %}
+                                    id="dst_lang_{{ lang }}" />
+                                {{ label }}
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

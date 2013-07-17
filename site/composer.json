@@ -1,0 +1,40 @@
+{
+    "name": "ivannpaz/chatty-i18n",
+    "type": "project",
+    "homepage": "http://chat.ivannpaz.me/",
+    "description": "Small chat application supporting realtime translation",
+    "authors": [
+        {
+            "name": "Ivan N Paz",
+            "email": "ivannpaz@gmail.com",
+            "homepage": "http://ivannpaz.me/",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "keywords": ["realtime", "translate", "chat", "php", "javascript"],
+
+    "require": {
+        "silex/silex": "~1.0",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "symfony/twig-bridge": "~2.3",
+        "symfony/yaml": "~2.3",
+        "predis/service-provider": "dev-master",
+        "cboden/Ratchet": "0.2.*",
+        "monolog/monolog": "1.6.*@dev",
+        "igorw/config-service-provider": "1.2.*@dev",
+        "matthiasnoback/microsoft-translator-service-provider": "0.2.0"
+    },
+
+    "autoload": {
+        "classmap": [
+            "app",
+            "app/controllers",
+            "app/libs"
+        ]
+    },
+
+    "config": {
+        "preferred-install": "dist"
+    }
+}

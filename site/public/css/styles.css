@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+body {
+    font: 18px 'Open Sans', Arial, sans-serif;
+    color: #444444;
+    background: #333;
+    padding: 0;
+}
+
+.clearfix {
+    *zoom:1;
+}
+.clearfix:before,
+.clearfix:after {
+    display:table;
+    content:"";
+}
+.clearfix:after {
+    clear:both;
+}
+
+#wrapper {
+    background: #f0f0f0;
+}
+
+#wrapper > .content {
+    padding: 2em;
+}
+
+#chat-window {
+    background: #ddd;
+}
+
+#chat-window ul {
+    overflow: auto;
+    height: 450px;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+#chat-window li {
+    margin: 0 0 0.8em;
+    border-radius: 5px;
+    line-height: 130%;
+}
+
+#chat-window li.sys {
+    font-size: 0.8em;
+    color: #777;
+}
+#chat-window li.sys:before {
+    content: "[server]";
+    padding-right: 3px;
+    color: #4c4;
+}
+
+#chat-window li.sys,
+#chat-window li.me,
+#chat-window li.them {
+    background: #fff;
+    padding: 4px 8px;
+}
+
+#chat-window li.me {
+    border-right: 20px solid #EFFAB4;
+    margin-left: 20px;
+    text-align: right;
+}
+
+#chat-window li.them {
+    border-left: 20px solid #FF9F80;
+    margin-right: 20px;
+}
+
+#chat-window li > span {
+    display: block;
+}
+
+#chat-window li > span.original {
+    font-style: italic;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #ccc;
+    color: #888;
+    font-size: 0.95em;
+}
+
+#chat-window li > span.translated {
+    padding-top: 6px;
+}
+
+#chat-window #input-container {
+    margin: 8px 12px;
+    padding: 8px 12px;
+    background: #fff;
+}
+
+#chat-window #input-container input[type="text"] {
+    color: #333;
+}
+
+.lang_selectors li label {
+    display: block;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.lang_selectors.source label:hover {
+    background: #EFFAB4;
+    cursor: pointer;
+}
+
+.lang_selectors.target label:hover {
+    background: #FF9F80;
+    cursor: pointer;
+}
