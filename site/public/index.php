@@ -9,7 +9,7 @@ use App\Application;
  * @var \App\Application
  */
 $app = new App\Application([
-    'debug' => true,
+    'debug' => ($_SERVER['SERVER_NAME'] === 'localhost'),
 ]);
 
 $app->run();
