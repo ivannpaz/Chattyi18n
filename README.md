@@ -14,7 +14,7 @@ Notes:
 - App Quality: ALPHA STAGE
 - Caching: No caching atm, it will blow away your Translation API monthly rate if not careful!
 - App Security: Crap. As a matter of fact, don't use this as is! It may
-burn your cat, dog or parrot if seen on sight.
+burn your cat, dog or parrot if caught on sight.
 
 Usage:
 ------
