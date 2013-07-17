@@ -32,6 +32,7 @@ def deploy(version='staging', branch='master'):
     fetch_repo(branch, publish_dir)
     cleanup_clone(publish_dir, current_release_path)
     run_composer(current_release_path)
+    publish_configuration(current_release_path)
     update_symlinks(publish_dir, current_release_path)
 
 
@@ -57,6 +58,11 @@ def cleanup_clone(publish_dir, current_release_path):
         run("rm -rf %s/.git" % (current_release_path))
         run("rm -rf %s/puppet" % (current_release_path))
         run("rm -rf %s/Vagrantfile" % (current_release_path))
+
+
+def publish_configuration(current_release_path):
+    with cd("%s/site" % (current_release_path)):
+        put("app/config/config.yml", "app/config")
 
 
 def update_symlinks(publish_dir, release_path):
