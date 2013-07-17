@@ -1,6 +1,10 @@
 $(document).ready(function () {
 
-    var $chatLog = $('#chat-window ul');
+    var $chatWindow = $('#chat-window ul');
+
+    if (!$chatWindow.length) {
+        return;
+    }
 
     var addLine = function(sender, original, translated) {
         var content = [];
@@ -16,10 +20,10 @@ $(document).ready(function () {
 
         content.push('</li>');
 
-        $chatLog.append(content.join(''));
+        $chatWindow.append(content.join(''));
 
-        $chatLog.animate({
-            scrollTop: $chatLog.prop("scrollHeight") - $chatLog.height()
+        $chatWindow.animate({
+            scrollTop: $chatWindow.prop("scrollHeight") - $chatWindow.height()
         }, 200);
     };
 
